@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Syariah Bugenvil</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0f172a',
+                            900: '#0b0f19',
+                        },
+                        gold: {
+                            500: '#d4af37',
+                            600: '#aa8c2c',
+                            400: '#e6ca65'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(11, 15, 25, 0.6), rgba(11, 15, 25, 0.7)), url('https://placehold.co/1920x1080/0f172a/d4af37?text=BU+GEN+VIL') center/cover no-repeat;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%);
+        }
+        .gold-text {
+            color: #d4af37;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-navy-900/90 backdrop-blur-md border-b border-gold-500/20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <i class="fa-solid fa-hotel text-gold-500 text-2xl"></i>
+                <span class="font-serif text-2xl font-bold tracking-wider">RUMAH SYARIAH <span class="text-gold-500">BUGENVIL</span></span>
+            </a>
+
+            <!-- Desktop Navigasi -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="hover:text-gold-400 transition">Home</a>
+                <a href="#rooms" class="hover:text-gold-400 transition">Kamar</a>
+                <a href="#amenities" class="hover:text-gold-400 transition">Fasilitas</a>
+                <a href="#about" class="hover:text-gold-400 transition">Tentang Kami</a>
+                <a href="#testimonials" class="hover:text-gold-400 transition">Testimoni</a>
+                <a href="#contact" class="hover:text-gold-400 transition">Kontak</a>
+            </nav>
+
+            <!-- Tombol CTA & Mobile Menu Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="#booking-widget" class="hidden sm:inline-block gold-gradient text-navy-900 font-semibold px-5 py-2.5 rounded-full shadow-lg hover:opacity-90 transition transform hover:-translate-y-0.5">
+                    Pesan Sekarang
+                </a>
+                <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900 border-b border-gold-500/20 px-6 py-4 space-y-3">
+            <a href="#home" class="block hover:text-gold-400 transition">Home</a>
+            <a href="#rooms" class="block hover:text-gold-400 transition">Kamar</a>
+            <a href="#amenities" class="block hover:text-gold-400 transition">Fasilitas</a>
+            <a href="#about" class="block hover:text-gold-400 transition">Tentang Kami</a>
+            <a href="#testimonials" class="block hover:text-gold-400 transition">Testimoni</a>
+            <a href="#contact" class="block hover:text-gold-400 transition">Kontak</a>
+            <a href="#booking-widget" class="block text-center gold-gradient text-navy-900 font-semibold py-2 rounded-full">Pesan Sekarang</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center pt-20 text-center text-white px-4">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <span class="inline-block uppercase tracking-widest text-gold-400 text-sm font-semibold border border-gold-400/40 px-4 py-1.5 rounded-full bg-navy-900/40 backdrop-blur-sm">
+                Penginapan 
+            </span>
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight tracking-wide">
+                Nikmati Pengalaman Menginap Dengan Suasana Tenang Dan Asri
+            </h1>
+            <p class="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto font-light">
+                Fasilitas Lengkap, Pelayanan Ramah, Dan Lokasi Strategis Menanti Kedatangan anda.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+                <a href="#rooms" class="gold-gradient text-navy-900 font-semibold px-8 py-3.5 rounded-full shadow-xl hover:opacity-90 transition">
+                    Jelajahi Kamar
+                </a>
+                <a href="#about" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-full border border-white/20 backdrop-blur-md transition">
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking-widget" class="relative z-20 max-w-6xl mx-auto px-4 -mt-16 sm:-mt-20">
+        <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 border border-slate-100">
+            <form id="quick-booking-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Check-In</label>
+                    <div class="flex items-center border border-slate-200 rounded-xl px-3 py-2.5 bg-slate-50 focus-within:border-gold-500">
+                        <i class="fa-regular fa-calendar text-gold-600 mr-2"></i>
+                        <input type="date" required class="w-full bg-transparent focus:outline-none text-sm text-slate-700">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Check-Out</label>
+                    <div class="flex items-center border border-slate-200 rounded-xl px-3 py-2.5 bg-slate-50 focus-within:border-gold-500">
+                        <i class="fa-regular fa-calendar text-gold-600 mr-2"></i>
+                        <input type="date" required class="w-full bg-transparent focus:outline-none text-sm text-slate-700">
+                    </div>
+                </div>
+                <div>
+                   
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Tipe Kamar</label>
+                    <div class="flex items-center border border-slate-200 rounded-xl px-3 py-2.5 bg-slate-50 focus-within:border-gold-500">
+                        <i class="fa-solid fa-bed text-gold-600 mr-2"></i>
+                        <select class="w-full bg-transparent focus:outline-none text-sm text-slate-700">
+                            <option>Standar room</option>
+                            <option>Deluxe 1</option>
+                            <option>Deluxe 2</option>
+                            <option>Deluxe Family</option>
+                            <option>Suite Family</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex items-end h-full pt-5 lg:pt-0">
+                    <button type="submit" class="w-full bg-navy-900 hover:bg-navy-800 text-gold-400 font-semibold py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-magnifying-glass"></i> Cari Kamar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="rooms" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-gold-600 font-semibold uppercase tracking-widest text-sm">Harga Terjangkau</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900 mt-2">list Room</h2>
+            <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            <p class="text-slate-600 mt-4">Tempat Beristirahat Terbaik Untuk Perjalanan Anda.</p>
+        </div>
+
+        <!-- Grid Kamar -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition hover:-translate-y-1 hover:shadow-2xl flex flex-col">
+                <div class="relative overflow-hidden group h-64">
+                    <img src="https://placehold.co/600x400/1e293b/d4af37?text=Standar+Room" alt="Standar Room" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 right-4 bg-navy-900/80 backdrop-blur-sm text-gold-400 text-xs font-semibold px-3 py-1 rounded-full">
+                        Rp 175.000-200.000 / Malam 
+                    </span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Standar Room</h3>
+                        <p class="text-slate-600 text-sm mb-4 line-clamp-2">Kamar Standar Nyaman Dengan Single Bed Kapasitas 2 Orang, Harga Pas di Kantong.</p>
+                        <div class="flex items-center gap-4 text-slate-500 text-xs mb-6">
+                            <span><i class="fa-solid fa-wifi text-gold-600 mr-1"></i> Wi-Fi Gratis</span>
+                            <span><i class="fa-solid fa-utensils text-gold-600 mr-1"></i>  Sarapan</span>
+                            <span><i class="fa-solid fa-maximize text-gold-600 mr-1"></i> Free Berenang</span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('Standar Room', 'Rp 175.000-200.000', 'Kamar Standar Nyaman, Harga Pas di Kantong.')" class="w-full bg-navy-900 hover:bg-gold-600 hover:text-navy-900 text-white font-medium py-2.5 rounded-xl transition">
+                        
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition hover:-translate-y-1 hover:shadow-2xl flex flex-col">
+                <div class="relative overflow-hidden group h-64">
+                    <img src="https://placehold.co/600x400/1e293b/d4af37?text=Deluxe+1" alt="Deluxe 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 right-4 bg-navy-900/80 backdrop-blur-sm text-gold-400 text-xs font-semibold px-3 py-1 rounded-full">
+                        Rp 250.000-275.000 / malam
+                    </span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Deluxe 1</h3>
+                        <p class="text-slate-600 text-sm mb-4 line-clamp-2">Dengan Single Bed Ukuran Besar Kapasitas 3 Orang.</p>
+                        <div class="flex items-center gap-4 text-slate-500 text-xs mb-6">
+                            <span><i class="fa-solid fa-wifi text-gold-600 mr-1"></i> Wi-Fi Gratis</span>
+                            <span><i class="fa-solid fa-utensils text-gold-600 mr-1"></i>  Sarapan</span>
+                            <span><i class="fa-solid fa-maximize text-gold-600 mr-1"></i> Free Berenang</span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('Executive Suite', 'Rp 250.000-275.000', 'Dengan 1 Kasur Ukuran Besar Muat untuk 3 orang.')" class="w-full bg-navy-900 hover:bg-gold-600 hover:text-navy-900 text-white font-medium py-2.5 rounded-xl transition">
+                        
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition hover:-translate-y-1 hover:shadow-2xl flex flex-col">
+                <div class="relative overflow-hidden group h-64">
+                    <img src="https://placehold.co/600x400/1e293b/d4af37?text=Deluxe+2" alt="Deluxe 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 right-4 bg-navy-900/80 backdrop-blur-sm text-gold-400 text-xs font-semibold px-3 py-1 rounded-full">
+                        Rp 250.000-275.000/ malam
+                    </span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Deluxe 2</h3>
+                        <p class="text-slate-600 text-sm mb-4 line-clamp-2">Dengan Double Bed Kapasitas 4 Orang.</p>
+                        <div class="flex items-center gap-4 text-slate-500 text-xs mb-6">
+                            <span><i class="fa-solid fa-wifi text-gold-600 mr-1"></i> Wi-Fi Gratis</span>
+                            <span><i class="fa-solid fa-utensils text-gold-600 mr-1"></i>  Sarapan</span>
+                            <span><i class="fa-solid fa-maximize text-gold-600 mr-1"></i> Free Berenang</span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('Deluxe 2', 'Rp 250.000-275.000', 'Dengan Double Bed Kapasitas 4 Orang.')" class="w-full bg-navy-900 hover:bg-gold-600 hover:text-navy-900 text-white font-medium py-2.5 rounded-xl transition">
+                        
+                    </button>
+                </div>
+            </div>
+        <!-- Card 4 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition hover:-translate-y-1 hover:shadow-2xl flex flex-col">
+                <div class="relative overflow-hidden group h-64">
+                    <img src="https://placehold.co/600x400/1e293b/d4af37?text=Deluxe+Family" alt="Deluxe Family" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 right-4 bg-navy-900/80 backdrop-blur-sm text-gold-400 text-xs font-semibold px-3 py-1 rounded-full">
+                        Rp 275.000-300.000 / malam
+                    </span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Deluxe Family</h3>
+                        <p class="text-slate-600 text-sm mb-4 line-clamp-2">Dengan Double Bed Kapasitas 4 Orang.</p>
+                        <div class="flex items-center gap-4 text-slate-500 text-xs mb-6">
+                            <span><i class="fa-solid fa-wifi text-gold-600 mr-1"></i> Wi-Fi Gratis</span>
+                            <span><i class="fa-solid fa-utensils text-gold-600 mr-1"></i>  Sarapan</span>
+                            <span><i class="fa-solid fa-maximize text-gold-600 mr-1"></i> Free Berenang</span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('Executive Suite', 'Rp 275.000-300.000', 'Dengan Double Bed Kapasitas 4 Orang.')" class="w-full bg-navy-900 hover:bg-gold-600 hover:text-navy-900 text-white font-medium py-2.5 rounded-xl transition">
+                        
+                    </button>
+                </div>
+             </div>   
+            <!-- Card 5 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition hover:-translate-y-1 hover:shadow-2xl flex flex-col">
+                <div class="relative overflow-hidden group h-64">
+                    <img src="https://placehold.co/600x400/1e293b/d4af37?text=Suite+Family" alt="Suite Family" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 right-4 bg-navy-900/80 backdrop-blur-sm text-gold-400 text-xs font-semibold px-3 py-1 rounded-full">
+                        Rp 325.000-350.000 / malam
+                    </span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Suite Family</h3>
+                        <p class="text-slate-600 text-sm mb-4 line-clamp-2">Dengan Double Bed Ukuran Besar Kapasitas 4 Orang.</p>
+                        <div class="flex items-center gap-4 text-slate-500 text-xs mb-6">
+                            <span><i class="fa-solid fa-wifi text-gold-600 mr-1"></i> Wi-Fi Gratis</span>
+                            <span><i class="fa-solid fa-utensils text-gold-600 mr-1"></i>  Sarapan</span>
+                            <span><i class="fa-solid fa-maximize text-gold-600 mr-1"></i> Free Berenang</span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('Executive Suite', 'Rp 325.000-350.000', 'Dengan Double Bed Ukuran Besar Kapasitas 4 Orang.')" class="w-full bg-navy-900 hover:bg-gold-600 hover:text-navy-900 text-white font-medium py-2.5 rounded-xl transition">
+                        
+                    </button>
+                </div>
+            </div>
+    </section>
+
+    
+
+    <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-gold-600 font-semibold uppercase tracking-widest text-sm">Tentang Bugenvil</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">Simbol Kenyamanan & Keramahan</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Berdiri sejak tahun 2012, dengan satu misi sederhana:menghadirkan tempat istirahat terbaik yang terasa seperti rumah sendiri bagi setiap pelancong.
+                </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Galeri Foto Grid -->
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://placehold.co/400x500/1e293b/d4af37?text=Lobby" alt="Hotel Lobby" class="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition duration-300">
+                <img src="https://placehold.co/400x300/1e293b/d4af37?text=Berenang" alt="Hotel Restaurant" class="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition duration-300 mt-8">
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-navy-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-gold-400 font-semibold uppercase tracking-widest text-sm">Testimoni Tamu</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">Apa Kata Mereka Tentang Kami</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimoni 1 -->
+                <div class="bg-navy-800/80 p-8 rounded-2xl border border-gold-500/20 relative">
+                    <div class="flex text-gold-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">"Harga bersahabat. Suasana tenang, seperti villa keluarga. 
+Keren, adem ."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://placehold.co/100x100/d4af37/0f172a?text=AD" alt="Andi Pratama" class="w-12 h-12 rounded-full object-cover border border-gold-500">
+                        <div>
+                            <h4 class="font-bold text-white">S*****</h4>
+                            <p class="text-gold-400 text-xs">Travel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 2 -->
+                <div class="bg-navy-800/80 p-8 rounded-2xl border border-gold-500/20 relative">
+                    <div class="flex text-gold-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">"Kamar luas dan bersih, harga murah sudah ples sarapan, tipe klg,bonus kolam renang dan staf yg ramah..pasti balik lagi kl nyari tipe klg dan kolam renang 
+
+."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://placehold.co/100x100/d4af37/0f172a?text=SR" alt="Siti Rahma" class="w-12 h-12 rounded-full object-cover border border-gold-500">
+                        <div>
+                            <h4 class="font-bold text-white">G*******</h4>
+                            <p class="text-gold-400 text-xs">Travel </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 3 -->
+                <div class="bg-navy-800/80 p-8 rounded-2xl border border-gold-500/20 relative">
+                    <div class="flex text-gold-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">"Awalnya cuma booking 1 hari, tapi gak nyangka bisa dapet homestay yg enak banget yg akhirnya extend selama berhari-hari. Staff super ramah, aku WA jam 10 malam pun direspon dgn baik. Bisa early check-in/late check-out, cukup bayar biaya tambahan 100rb. Menu free breakfast: nasi uduk dan nasi goreng. Kalau laper bisa pesen mie instan. Kamarnya nyaman n fully furnished, dibersihkan setiap hari. Ada kolam renang, jadi bocil seneng bgt. Next klo ke Bandung wajib nginep di sini lagi :D
+
+"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://placehold.co/100x100/d4af37/0f172a?text=DW" alt="David Wijaya" class="w-12 h-12 rounded-full object-cover border border-gold-500">
+                        <div>
+                            <h4 class="font-bold text-white">D******</h4>
+                            <p class="text-gold-400 text-xs">Travel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <span class="text-gold-600 font-semibold uppercase tracking-widest text-sm">Hubungi Kami</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">Mari Rencanakan Kunjungan Anda</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Punya pertanyaan khusus seputar reservasi, silahkan hubungi kami.
+                </p>
+                <div class="space-y-4 pt-2">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Alamat</h4>
+                            <p class="text-slate-600 text-sm">Jl. Awiligar Raya No.246, Cibeunying, Kec.Cimenyan, Kota Bandung</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Telepon</h4>
+                            <p class="text-slate-600 text-sm">Phone 022-20455356
+                                085925093363
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Email</h4>
+                            <p class="text-slate-600 text-sm">reservation@Bugenvil.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Lengkap</label>
+                        <input type="text" required placeholder="Masukkan nama Anda" class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-gold-500 bg-slate-50 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Email</label>
+                        <input type="email" required placeholder="nama@email.com" class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-gold-500 bg-slate-50 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Pesan / Permintaan Khusus</label>
+                        <textarea rows="4" required placeholder="Tuliskan pesan Anda..." class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-gold-500 bg-slate-50 text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full gold-gradient text-navy-900 font-bold py-3.5 rounded-xl shadow-md hover:opacity-90 transition">
+                        Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy-900 text-white border-t border-gold-500/20 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-hotel text-gold-500 text-2xl"></i>
+                    <span class="font-serif text-2xl font-bold tracking-wider">Bugenvil <span class="text-gold-500"></span></span>
+                </div>
+                <p class="text-slate-400 text-sm">Destinasi menginap terbaik yang memadukan kenyamanan, keramahan.</p>
+                <div class="flex gap-4 text-lg">
+                    <a href="#" class="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-navy-900 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-navy-900 transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-navy-900 transition"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-navy-900 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-serif font-bold text-lg mb-4 text-gold-400">Tautan Cepat</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li><a href="#home" class="hover:text-gold-400 transition">Beranda</a></li>
+                    <li><a href="#rooms" class="hover:text-gold-400 transition">Kamar & Suite</a></li>
+                    <li><a href="#amenities" class="hover:text-gold-400 transition">Fasilitas Hotel</a></li>
+                    <li><a href="#about" class="hover:text-gold-400 transition">Tentang Kami</a></li>
+                    <li><a href="#contact" class="hover:text-gold-400 transition">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div>
+               
+                <h4 class="font-serif font-bold text-lg mb-4 text-gold-400">Newsletter</h4>
+                <p class="text-slate-400 text-sm mb-4">Dapatkan penawaran eksklusif dan promo menarik langsung ke email Anda.</p>
+                <form id="newsletter-form" class="space-y-2">
+                    <input type="email" required placeholder="Email Anda..." class="w-full bg-navy-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-500">
+                    <button type="submit" class="w-full gold-gradient text-navy-900 font-bold py-2.5 rounded-xl text-sm transition">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 pt-6 text-center text-slate-500 text-xs">
+            &copy; 2026 Bugenvil. Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+    <div id="room-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 relative transform scale-95 transition-all duration-300 shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="modal-title" class="font-serif text-2xl font-bold text-navy-900 mb-2">Nama Kamar</h3>
+            <p id="modal-price" class="text-gold-600 font-bold text-lg mb-4">Rp 0 / malam</p>
+            <p id="modal-desc" class="text-slate-600 text-sm mb-6 leading-relaxed">Deskripsi lengkap kamar...</p>
+            <div class="space-y-3">
+                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider">Pilih Tanggal Reservasi</label>
+                <input type="date" class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:outline-none focus:border-gold-500">
+                <button onclick="bookRoom()" class="w-full gold-gradient text-navy-900 font-bold py-3 rounded-xl shadow-md hover:opacity-90 transition mt-2">
+                    Konfirmasi Reservasi
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-navy-900 text-white px-6 py-3 rounded-xl shadow-2xl border border-gold-500 flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-gold-400 text-xl"></i>
+        <div>
+            <h5 id="toast-title" class="font-bold text-sm">Berhasil</h5>
+            <p id="toast-msg" class="text-xs text-slate-300">Pesan Anda berhasil dikirim.</p>
+        </div>
+    </div>
+
+    <script>
+        // Toggle mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sticky Navbar effect on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md', 'bg-navy-900/95');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Modal Kamar Functions
+        const modal = document.getElementById('room-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalPrice = document.getElementById('modal-price');
+        const modalDesc = document.getElementById('modal-desc');
+
+        function openModal(title, price, desc) {
+            modalTitle.textContent = title;
+            modalPrice.textContent = price;
+            modalDesc.textContent = desc;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Toast Notification Function
+        function showToast(title, msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-title').textContent = title;
+            document.getElementById('toast-msg').textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 4000);
+        }
+
+        // Form Submission Handlers (tanpa alert)
+        document.getElementById('quick-booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showToast('Pencarian Diproses', 'Mencari ketersediaan kamar terbaik untuk Anda...');
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showToast('Pesan Terkirim', 'Terima kasih, tim kami akan segera menghubungi Anda.');
+            e.target.reset();
+        });
+
+        document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showToast('Berlangganan Sukses', 'Email Anda telah terdaftar untuk promo eksklusif.');
+            e.target.reset();
+        });
+
+        function bookRoom() {
+            closeModal();
+            showToast('Reservasi Berhasil', 'Pesanan kamar Anda sedang diproses. Cek email untuk konfirmasi.');
+        }
+    </script>
+</body>
+</html>
